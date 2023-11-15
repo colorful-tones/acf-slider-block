@@ -1,5 +1,9 @@
 // Editor styles only.
 
+.editor-styles-wrapper [data-type="wpe/slide"] {
+	z-index: 1;
+}
+
 .editor-styles-wrapper [data-type="wpe/slider"] .swiper-pagination {
 	pointer-events: none;
 }
@@ -20,10 +24,11 @@
 .editor-styles-wrapper [data-type="wpe/slider"] .block-list-appender {
 	bottom: 1rem !important;
 	right: 1rem !important;
-	z-index: 999;
+	z-index: 20;
 }
 
 .editor-styles-wrapper [data-type="wpe/slider"] .block-list-appender__toggle {
+	height: 36px;
 	width: auto;
 }
 
