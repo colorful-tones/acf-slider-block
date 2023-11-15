@@ -51,7 +51,6 @@ const el = React.createElement;
 const withSlideBlockClass = wp.compose.createHigherOrderComponent( ( BlockListBlock ) => {
 	return ( props ) => {
 		const { name } = props;
-		console.log( props );
 
 		// Return usual component if not our's.
 		if ( name != 'wpe/slide' ) {
