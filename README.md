@@ -1,4 +1,4 @@
-# Demo ACF Plugin
+# ACF Slider Block plugin
 
 __Fork it, or download the [latest release](https://github.com/colorful-tones/acf-slider-block/releases), and make it your own!__
 
