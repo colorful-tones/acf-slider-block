@@ -4,7 +4,7 @@
  * @see https://swiperjs.com/swiper-api#parameters
  */
 export const swiperConfig = {
-	autoplay: false, // Automatically slide.
+	autoplay: true, // Automatically slide.
 	centeredSlides: true, // Center our slide.
 	direction: 'horizontal', // Horizontal slider.
 	effect: 'fade', // slide, fade and more.
