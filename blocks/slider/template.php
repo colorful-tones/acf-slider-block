@@ -93,10 +93,10 @@ $inner_blocks_template = array(
 
 		<?php if ( 'is-style-complex' === $block['className'] ) : ?>
 			<div class="swiper-pagination"></div>
-
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
 		<?php endif; ?>
+
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
 
 	</div><!-- .swiper -->
 
