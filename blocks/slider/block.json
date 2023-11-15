@@ -1,0 +1,79 @@
+{
+    "name": "wpe/slider",
+    "apiVersion": 2,
+    "title": "Slider",
+    "description": "Display a slider.",
+    "category": "media",
+    "icon": "slides",
+    "keywords": ["slider", "slideshow", "carousel"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "template.php"
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        },
+        "style": {
+            "type": "object",
+            "default": {
+                "dimensions": {
+                    "minHeight": "30vh"
+                }
+            }
+        }
+    },
+    "supports": {
+        "align": ["full", "wide"],
+        "anchor": true,
+        "className": true,
+        "color": {
+            "text": true,
+            "background": true
+        },
+        "dimensions": {
+            "minHeight": true
+        },
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "align": {
+                "type": "string",
+                "default": "full"
+            }
+        },
+        "innerBlocks": [
+            {
+                "name": "wpe/slide",
+                "attributes": {
+                    "className": "swiper-slide",
+                    "content": "Slide #1"
+                }
+            },
+            {
+                "name": "wpe/slide",
+                "attributes": {
+                    "className": "swiper-slide",
+                    "content": "Slide #2"
+                }
+            }
+        ]
+    },
+    "editorScript": ["swiper-module-editor"],
+    "editorStyle": "file:./editor.css",
+    "style": ["file:./../../swiper/swiper-bundle.css", "file:./style.css"],
+    "viewScript": ["swiper-module-front"],
+    "styles": [
+        {
+            "name": "default",
+            "label": "Default",
+            "isDefault": true
+        },
+        {
+            "name": "complex",
+            "label": "Complex"
+        }
+    ]
+}

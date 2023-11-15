@@ -1,0 +1,34 @@
+// Editor styles only.
+
+.editor-styles-wrapper [data-type="wpe/slider"] .swiper-pagination {
+	pointer-events: none;
+}
+
+.editor-styles-wrapper [data-type="wpe/slider"] .swiper-pagination::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.editor-styles-wrapper [data-type="wpe/slider"] .swiper-pagination * {
+	pointer-events: none;
+}
+
+.editor-styles-wrapper [data-type="wpe/slider"] .block-list-appender {
+	bottom: 1rem !important;
+	right: 1rem !important;
+	z-index: 999;
+}
+
+.editor-styles-wrapper [data-type="wpe/slider"] .block-list-appender__toggle {
+	width: auto;
+}
+
+.editor-styles-wrapper [data-type="wpe/slider"] .block-list-appender [aria-label]::before {
+	content: attr(aria-label);
+	display: block;
+	padding-inline: 1rem;
+}
