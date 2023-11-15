@@ -33,9 +33,8 @@ $inner_blocks_template = array(
 	array(
 		'wpe/slide',
 		array(
-			'slideImg',
-			array(
-				'src' => plugins_url( 'assets/image1.jpg', __FILE__ ),
+			'slideImg' => array(
+				'src' => '../slider/assets/image1.jpg',
 			),
 			'slideTitle' => 'Slide Title #1',
 			'className'  => 'swiper-slide',
@@ -45,9 +44,8 @@ $inner_blocks_template = array(
 	array(
 		'wpe/slide',
 		array(
-			'slideImg',
-			array(
-				'src' => plugins_url( 'assets/image2.jpg', __FILE__ ),
+			'slideImg' => array(
+				'src' => '../slider/assets/image2.jpg',
 			),
 			'slideTitle' => 'Slide Title #2',
 			'className'  => 'swiper-slide',
@@ -57,9 +55,8 @@ $inner_blocks_template = array(
 	array(
 		'wpe/slide',
 		array(
-			'slideImg',
-			array(
-				'src' => plugins_url( 'assets/image3.jpg', __FILE__ ),
+			'slideImg' => array(
+				'src' => '../slider/assets/image3.jpg',
 			),
 			'slideTitle' => 'Slide Title #3',
 			'className'  => 'swiper-slide',

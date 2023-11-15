@@ -14,7 +14,7 @@
         "slideImg": {
             "type": "object",
             "default": {
-                "src": "https://acf-slider.local/wp-content/plugins/acf-slider-block/blocks/slider/assets/image1.jpg"
+                "src": "new-slide.jpg"
             }
         },
         "slideTitle": {

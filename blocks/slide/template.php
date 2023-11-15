@@ -17,7 +17,7 @@ $slide_title = get_field( 'title' ) ? get_field( 'title' ) : $block['slideTitle'
 if ( $slide_img['ID'] ) {
 	$slide_img = wp_get_attachment_image( $slide_img['ID'], 'full', '', array( 'class' => 'wp-block-wpe-slide__img' ) );
 } else {
-	$slide_img = '<img src="' . $block['slideImg']['src'] . '" height="1080" width="1920" class="wp-block-wpe-slide__img">';
+	$slide_img = '<img src="' . plugins_url( $block['slideImg']['src'], __FILE__ ) . '" height="1080" width="1920" class="wp-block-wpe-slide__img">';
 }
 
 // Support custom id values.
