@@ -23,3 +23,10 @@ Initial release, which includes:
 
 - Slider Block which uses [SwiperJS](https://swiperjs.com/) (v11.0.4)
   - Two style variations: "Default" and "Complex" - examples of how you might have different variations. Feel free to fork and modify!
+
+## Resources
+
+- Need help converting your block markup to PHP nested arrays or JS objects? Check out [WPHTML Converter](https://happyprime.github.io/wphtml-converter/)
+- Download and include the latest [SwiperJS from JSDelivr.com](https://www.jsdelivr.com/package/npm/swiper).
+- Developer.WordPress.org - ['Metadata in block.json'](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/)
+- Developer.WordPress.org - ['Supports'](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/)
