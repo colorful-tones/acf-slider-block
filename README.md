@@ -17,6 +17,14 @@ __Required__ You must have [ACF PRO](https://https://www.advancedcustomfields.co
 
 ## Changelog
 
+### 0.1.2 – 2023-11-15
+
+Squash the bugs 🐛
+
+- Adjust `z-index` for 'Add Slide' button in editor for easier clicking.
+- Adjust placeholder, default image paths for resilience.
+- Remove unnecessary `console.log()`
+
 ### 0.1.1 – 2023-11-15
 
 Initial release, which includes:
