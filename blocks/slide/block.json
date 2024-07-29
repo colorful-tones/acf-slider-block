@@ -1,0 +1,41 @@
+{
+    "name": "wpe/slide",
+    "apiVersion": 2,
+    "title": "Slide",
+    "description": "Add slides to a slider",
+    "category": "media",
+    "icon": "format-image",
+    "keywords": ["slider", "slideshow", "carousel"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "template.php"
+    },
+    "usesContext": ["acf/fields"],
+    "attributes": {
+        "slideImg": {
+            "type": "object",
+            "default": {
+                "src": "new-slide.jpg"
+            }
+        },
+        "slideTitle": {
+            "type": "string",
+            "default": "Slide Title"
+        },
+	"slideObjectPosition": {
+            "type": "string",
+            "default": "center center"
+	}
+    },
+    "parent": [ "wpe/slider" ],
+    "supports": {
+		"align": false,
+        "anchor": true,
+        "className": true,
+        "color": {
+            "text": true,
+            "background": true
+        },
+        "reusable": false
+    }
+}
