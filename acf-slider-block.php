@@ -42,6 +42,7 @@ add_filter( 'acf/pre_load_post_id', 'fix_acf_post_id_on_preview', 10, 2 );
 */
 
 /**
+=======
  * Plugin Name:       ACF Slider Block
  * Description:       A slider carousel block.
  * Version:           0.1.2
@@ -60,6 +61,14 @@ add_filter( 'acf/pre_load_post_id', 'fix_acf_post_id_on_preview', 10, 2 );
  * @return void
  */
 function wpe_slider_register_blocks() {
+	/**
+	 * We register our block's with WordPress's handy
+	 * register_block_type();
+	 *
+	 * @link https://developer.wordpress.org/reference/functions/register_block_type/
+	 */
+	register_block_type( __DIR__ . '/blocks/slider/' );
+	register_block_type( __DIR__ . '/blocks/slide/' );
 }
 add_action( 'init', 'wpe_slider_register_blocks', 5 );
 
@@ -220,7 +229,5 @@ function wpe_register_acf_fields() {
 	);
 	$fields_json['local']      = 'json';
 	$fields_json['local_file'] = $path;
-
-	acf_add_local_field_group( $fields_json );
 }
 add_action( 'acf/include_fields', 'wpe_register_acf_fields' );

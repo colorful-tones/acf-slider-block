@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Slider block.
  *
@@ -70,7 +69,6 @@ $inner_blocks_template = array(
 		array(),
 	),
 );
-
 
 ?>
 

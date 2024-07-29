@@ -13,6 +13,7 @@
 
 $slide_img   = get_field( 'image' );
 $slide_title = get_field( 'title' ) ? get_field( 'title' ) : $block['slideTitle'];
+
 $position = get_field( 'object_position' ) ? get_field( 'object_position' ) : $block['slideObjectPosition'];
 
 $height = $context['acf/fields']['height'];
@@ -54,7 +55,6 @@ if ( $is_preview && empty($title) )
 
 
 <?php if ( ! $is_preview ) : ?>
-
 	<div
 		<?php
 		echo wp_kses_data(
@@ -76,6 +76,10 @@ if ( $is_preview && empty($title) )
 		<p class="wp-block-wpe-slide__copy"><?php echo esc_html( $slide_title ); ?></p>
 	<?php endif; ?>
 
+<?php endif; ?>
+
+	<?php echo wp_kses_post( $slide_img ); ?>
+	<p class="wp-block-wpe-slide__copy"><?php echo esc_html( $slide_title ); ?></p>
 
 <?php if ( ! $is_preview ) : ?>
 	</div>
