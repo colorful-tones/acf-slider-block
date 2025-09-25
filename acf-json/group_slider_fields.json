@@ -101,6 +101,210 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_main_slider_accordion",
+            "label": "Main Slider",
+            "name": "main_slider_accordion",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "endpoint": 0,
+            "multi_expand": 0,
+            "open": 0
+        },
+        {
+            "key": "field_main_slider_config",
+            "label": "Configuration",
+            "name": "main_slider_config",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Configure settings for the main slider using JSON. You can either paste JSON directly or upload a JSON file.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_main_slider_json_textarea",
+                    "label": "JSON Configuration",
+                    "name": "json_textarea",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Paste Swiper.js configuration JSON for the main slider here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 8,
+                    "placeholder": "{\n  \"slidesPerView\": 1,\n  \"loop\": true,\n  \"autoplay\": {\n    \"enabled\": true\n  },\n  \"pagination\": {\n    \"el\": \".swiper-pagination\"\n  },\n  \"navigation\": {\n    \"nextEl\": \".swiper-button-next\",\n    \"prevEl\": \".swiper-button-prev\"\n  }\n}",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_main_slider_json_file",
+                    "label": "Upload JSON File",
+                    "name": "json_file",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "Upload a JSON file containing Swiper.js configuration for the main slider. This will override the textarea content.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "json"
+                },
+                {
+                    "key": "field_main_slider_json_validation",
+                    "label": "Validation Status",
+                    "name": "json_validation",
+                    "aria-label": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "JSON configuration is empty.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                }
+            ]
+        },
+        {
+            "key": "field_thumbnails_accordion",
+            "label": "Thumbnails",
+            "name": "thumbnails_accordion",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66a0fd0c6d40c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "endpoint": 0,
+            "multi_expand": 0,
+            "open": 0
+        },
+        {
+            "key": "field_thumbnails_config",
+            "label": "Configuration",
+            "name": "thumbnails_config",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Configure settings for the thumbnail slider using JSON. You can either paste JSON directly or upload a JSON file.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66a0fd0c6d40c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_thumbnails_json_textarea",
+                    "label": "JSON Configuration",
+                    "name": "json_textarea",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Paste Swiper.js configuration JSON for the thumbnail slider here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 8,
+                    "placeholder": "{\n  \"slidesPerView\": 4,\n  \"spaceBetween\": 10,\n  \"freeMode\": true,\n  \"watchSlidesProgress\": true,\n  \"breakpoints\": {\n    \"320\": {\n      \"slidesPerView\": 2,\n      \"spaceBetween\": 5\n    },\n    \"768\": {\n      \"slidesPerView\": 3,\n      \"spaceBetween\": 10\n    },\n    \"1024\": {\n      \"slidesPerView\": 4,\n      \"spaceBetween\": 10\n    }\n  }\n}",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_thumbnails_json_file",
+                    "label": "Upload JSON File",
+                    "name": "json_file",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "Upload a JSON file containing Swiper.js configuration for the thumbnail slider. This will override the textarea content.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "json"
+                },
+                {
+                    "key": "field_thumbnails_json_validation",
+                    "label": "Validation Status",
+                    "name": "json_validation",
+                    "aria-label": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "JSON configuration is empty.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                }
+            ]
         }
     ],
     "location": [
@@ -118,7 +322,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": false,
+    "active": true,
     "description": "",
     "show_in_rest": 0,
     "modified": 1722279493

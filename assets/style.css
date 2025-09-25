@@ -1,0 +1,92 @@
+.wp-theme-twentytwentyfive .wp-block-wpe-slider .swiper-thumbs .swiper-slide,
+.wp-theme-twentytwentyfour .wp-block-wpe-slider .swiper-thumbs .swiper-slide,
+.wp-theme-twentytwentythree .wp-block-wpe-slider .swiper-thumbs .swiper-slide {
+  opacity: 0.2;
+}
+.wp-theme-twentytwentyfive
+  .wp-block-wpe-slider
+  .swiper-wrapper-thumb
+  .swiper-slide.swiper-slide-thumb-active,
+.wp-theme-twentytwentyfour
+  .wp-block-wpe-slider
+  .swiper-wrapper-thumb
+  .swiper-slide.swiper-slide-thumb-active,
+.wp-theme-twentytwentythree
+  .wp-block-wpe-slider
+  .swiper-wrapper-thumb
+  .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.wp-theme-twentytwentyfive .wp-block-wpe-slider .swiper-wrapper,
+.wp-theme-twentytwentyfour .wp-block-wpe-slider .swiper-wrapper,
+.wp-theme-twentytwentythree .wp-block-wpe-slider .swiper-wrapper {
+  /* height: 700px; */
+}
+
+.wp-theme-twentytwentyfive
+  .wp-block-wpe-slider
+  .swiper-main
+  .swiper-slide
+  .wp-block-wpe-slide__img,
+.wp-theme-twentytwentyfour
+  .wp-block-wpe-slider
+  .swiper-main
+  .swiper-slide
+  .wp-block-wpe-slide__img,
+.wp-theme-twentytwentythree
+  .wp-block-wpe-slider
+  .swiper-main
+  .swiper-slide
+  .wp-block-wpe-slide__img {
+  height: 100%;
+}
+
+/* Remove focus border from swiper navigation buttons */
+.swiper-button-prev:focus,
+.swiper-button-next:focus {
+  outline: none;
+  border: none;
+}
+
+/* Old Plugin Styles - Start */
+.swiper-slide:not(.swiper-slide-active) {
+}
+
+.swiper-wrapper {
+  /*display: flex;*/
+}
+
+/*
+	.wp-block-wpe-slider .swiper-thumbs {
+		flex-wrap: wrap;
+		column-gap: 10px;
+		row-gap: 10px;
+		width:100%;
+		justify-content:center;
+	}
+*/
+
+.wp-block-wpe-slider .swiper-thumbs .swiper-wrapper {
+  height: 80px; /*causes slight under/over size*/
+  padding-top: 10px;
+}
+.wp-block-wpe-slider .swiper-thumbs .swiper-slide {
+  opacity: 0; /*avoid pageshift*/
+  width: 0px;
+}
+
+.wp-block-wpe-slider .swiper-main .swiper-slide img {
+  object-fit: cover; /*avoid squeezed imaged on initial load*/
+  aspect-ratio: 1/1; /*avoid resize on wpblock container */
+}
+
+.wp-block-wpe-slider .swiper-main .swiper-slide:not(:first-child) {
+  /*opacity:0; */ /*avoid pageshift */
+  /*width:0px;*/
+  display: none;
+}
+
+.wp-block-wpe-slider .swiper-main .swiper-slide {
+}
+/* Old Plugin Styles - End */

@@ -1,46 +1,318 @@
-// Editor styles only.
+/* Editor styles only. */
 
 .editor-styles-wrapper [data-type="wpe/slide"] .swiper-slide {
-	margin-top: 0px !important;
-	margin-bottom: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 .editor-styles-wrapper [data-type="wpe/slide"] {
-	z-index: 1;
-	margin: 0px !important;
-	--content-width: 100%;
+  z-index: 1;
+  margin: 0px !important;
+  --content-width: 100%;
 }
 
 .editor-styles-wrapper [data-type="wpe/slider"] .swiper-pagination {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .editor-styles-wrapper [data-type="wpe/slider"] .swiper-pagination::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .editor-styles-wrapper [data-type="wpe/slider"] .swiper-pagination * {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .editor-styles-wrapper [data-type="wpe/slider"] .block-list-appender {
-	bottom: 1rem !important;
-	right: 1rem !important;
-	z-index: 20;
+  bottom: 1rem !important;
+  right: 1rem !important;
+  z-index: 20;
 }
 
 .editor-styles-wrapper [data-type="wpe/slider"] .block-list-appender__toggle {
-	height: 36px;
-	width: auto;
+  height: 36px;
+  width: auto;
 }
 
-.editor-styles-wrapper [data-type="wpe/slider"] .block-list-appender [aria-label]::before {
-	content: attr(aria-label);
-	display: block;
-	padding-inline: 0rem;
+.editor-styles-wrapper
+  [data-type="wpe/slider"]
+  .block-list-appender
+  [aria-label]::before {
+  content: attr(aria-label);
+  display: block;
+  padding-inline: 0rem;
+}
+
+/* Editor styles for the slider block */
+
+.wp-block-wpe-slider {
+  position: relative;
+}
+
+/* Editor navigation controls */
+.editor-styles-wrapper .wp-block-wpe-slider .editor-slide-navigation {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  z-index: 100 !important;
+  display: flex !important;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.95) !important;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  pointer-events: auto !important;
+  user-select: none;
+  max-width: 200px;
+}
+
+.editor-styles-wrapper .wp-block-wpe-slider .editor-slide-nav-button {
+  background: #007cba !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 3px;
+  padding: 6px 12px;
+  cursor: pointer !important;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  pointer-events: auto !important;
+  user-select: none;
+}
+
+.editor-styles-wrapper .wp-block-wpe-slider .editor-slide-nav-button:hover {
+  background: #005a87;
+}
+
+.editor-styles-wrapper .wp-block-wpe-slider .editor-slide-nav-button:disabled {
+  background: #ccc !important;
+  cursor: not-allowed !important;
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+}
+
+.editor-styles-wrapper .wp-block-wpe-slider .editor-slide-counter {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Show navigation only when slider has multiple slides */
+.editor-styles-wrapper
+  .wp-block-wpe-slider:not(.has-multiple-slides)
+  .editor-slide-navigation {
+  display: none;
+}
+
+/* Ensure navigation doesn't interfere with editor interface */
+.editor-styles-wrapper .wp-block-wpe-slider .editor-slide-navigation {
+  /* Don't interfere with block selection */
+  position: absolute !important;
+  /* Ensure it stays within the block bounds */
+  max-width: calc(100% - 20px);
+  /* Don't overflow into other areas */
+  overflow: hidden;
+}
+
+/* Prevent navigation from affecting block toolbar */
+.editor-styles-wrapper .wp-block-wpe-slider .editor-slide-navigation * {
+  /* Don't interfere with block selection events */
+  pointer-events: auto;
+}
+
+/* Ensure block selection still works */
+.editor-styles-wrapper
+  .wp-block-wpe-slider.is-selected
+  .editor-slide-navigation {
+  /* Keep navigation visible when block is selected */
+  z-index: 100 !important;
+}
+
+/* Ensure editor interface remains visible */
+.editor-styles-wrapper .wp-block-wpe-slider {
+  /* Don't interfere with editor layout */
+  position: relative;
+  /* Ensure block settings panel can still be accessed */
+  z-index: auto;
+}
+
+/* Ensure navigation doesn't block block toolbar */
+.editor-styles-wrapper .wp-block-wpe-slider .editor-slide-navigation {
+  /* Don't interfere with block toolbar positioning */
+  position: absolute !important;
+  /* Ensure it doesn't block block selection */
+  pointer-events: auto;
+}
+
+/* JSON Configuration Field Styles */
+.acf-field[data-name="swiper_config"] {
+  background: #f8f9fa;
+  border: 1px solid #e2e4e7;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.acf-field[data-name="swiper_config"] .acf-label {
+  font-weight: 600;
+  color: #1e1e1e;
+  margin-bottom: 10px;
+}
+
+.acf-field[data-name="json_textarea"] textarea {
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px;
+  transition: border-color 0.2s ease;
+}
+
+.acf-field[data-name="json_textarea"] textarea:focus {
+  border-color: #007cba;
+  outline: none;
+  box-shadow: 0 0 0 1px #007cba;
+}
+
+/* Real-time validation styling */
+.acf-field[data-name="json_validation"] .acf-input {
+  padding: 8px 12px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-height: 20px;
+}
+
+/* Validation status classes - applied to field wrapper */
+.acf-field-swiper-json-validation.validation-success {
+  background: #d4edda !important;
+  border: 1px solid #c3e6cb !important;
+}
+
+.acf-field-swiper-json-validation.validation-success .acf-input {
+  background: #d4edda !important;
+  color: #155724 !important;
+}
+
+.acf-field-swiper-json-validation.validation-error {
+  background: #f8d7da !important;
+  border: 1px solid #f5c6cb !important;
+}
+
+.acf-field-swiper-json-validation.validation-error .acf-input {
+  background: #f8d7da !important;
+  color: #721c24 !important;
+}
+
+.acf-field-swiper-json-validation.validation-warning {
+  background: #fff3cd !important;
+  border: 1px solid #ffeaa7 !important;
+}
+
+.acf-field-swiper-json-validation.validation-warning .acf-input {
+  background: #fff3cd !important;
+  color: #856404 !important;
+}
+
+.acf-field-swiper-json-validation.validation-empty {
+  background: #f8f9fa !important;
+  border: 1px solid #dee2e6 !important;
+}
+
+.acf-field-swiper-json-validation.validation-empty .acf-input {
+  background: #f8f9fa !important;
+  color: #6c757d !important;
+}
+
+.acf-field-swiper-json-validation.validation-loading {
+  background: #e3f2fd !important;
+  border: 1px solid #bbdefb !important;
+}
+
+.acf-field-swiper-json-validation.validation-loading .acf-input {
+  background: #e3f2fd !important;
+  color: #1976d2 !important;
+}
+
+/* File upload field styling */
+.acf-field[data-name="json_file"] .acf-input {
+  padding: 10px;
+  background: #ffffff;
+  border: 2px dashed #ddd;
+  border-radius: 4px;
+  text-align: center;
+  transition: border-color 0.2s ease;
+}
+
+.acf-field[data-name="json_file"] .acf-input:hover {
+  border-color: #007cba;
+}
+
+.acf-field[data-name="json_file"] .acf-input:focus-within {
+  border-color: #007cba;
+  box-shadow: 0 0 0 1px #007cba;
+}
+
+/* Instructions styling */
+.acf-field[data-name="swiper_config"] .acf-instructions {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* Example JSON styling */
+.acf-field[data-name="json_textarea"] .acf-input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Loading state for file upload */
+.acf-field[data-name="json_file"] .acf-input.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Success state for file upload */
+.acf-field[data-name="json_file"] .acf-input.success {
+  border-color: #28a745;
+  background: #f8fff9;
+}
+
+/* Error state for file upload */
+.acf-field[data-name="json_file"] .acf-input.error {
+  border-color: #dc3545;
+  background: #fff8f8;
+}
+
+/* Animation for validation messages */
+@keyframes validationFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.acf-field-swiper-json-validation.validation-success,
+.acf-field-swiper-json-validation.validation-error,
+.acf-field-swiper-json-validation.validation-warning {
+  animation: validationFadeIn 0.3s ease-out;
 }

@@ -1,13 +1,12 @@
-
 .wp-block-wpe-slider .swiper-wrapper .swiper-slide:first-child {
 }
 
 .wp-block-wpe-slider .swiper-wrapper-thumb img {
-	/*border: 1px solid red;*/
+  /*border: 1px solid red;*/
 }
 
 .wp-block-wpe-slider .swiper-wrapper-thumb {
-/*	
+  /*	
 	padding-top: 10px;
 	flex-wrap: wrap;
 	column-gap: 10px;
@@ -16,102 +15,169 @@
 }
 
 .wp-block-wpe-slider .swiper-slide img {
-	object-fit: cover;
--moz-user-select: none;
-   -webkit-user-drag: none;
-   -webkit-user-select: none;
-   -ms-user-select: none;
+  object-fit: cover;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .wp-block-wpe-slider .swiper-wrapper-thumb .swiper-slide {
-	/*margin-right: 0 !important;*/
-	opacity: .2;
-	width:0px; /*avoid pageshift*/
-	height: 80px;
+  /*margin-right: 0 !important;*/
+  opacity: 0.2;
+  width: 80px; /* Fixed width for horizontal thumbnails */
+  height: 80px; /* Fixed height for horizontal thumbnails */
+}
+
+/* Vertical slider thumbnail adjustments */
+.wp-block-wpe-slider .swiper-vertical .swiper-wrapper-thumb .swiper-slide {
+  width: 80px; /* Fixed width for vertical thumbnails */
+  height: 60px; /* Smaller height for vertical thumbnails */
 }
 
 .wp-block-wpe-slider .swiper-thumbs {
-	overflow: hidden; /* hide additional thumbnails */
+  overflow: hidden; /* hide additional thumbnails */
 }
 
 .wp-block-wpe-slider .swiper-thumbs .swiper-slide img {
-	height: 80px;
+  height: 80px;
+}
+.wp-block-wpe-slider .swiper-thumbs .wp-block-wpe-slide__copy {
+	font-size: x-large;
 }
 
-.wp-block-wpe-slider .swiper-wrapper-thumb .swiper-slide.swiper-slide-thumb-active {
-	opacity: 1;
+.wp-block-wpe-slider
+  .swiper-wrapper-thumb
+  .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
 }
-
 
 .wp-block-wpe-slider .swiper {
-	--swiper-theme-color: var(--wp--preset--color--accent-3, var(--wp--preset--color--primary));
+  --swiper-theme-color: var(
+    --wp--preset--color--accent-3,
+    var(--wp--preset--color--primary)
+  );
 
-	--swiper-navigation-size: 2rem;
+  --swiper-navigation-size: 2rem;
 
-	--swiper-pagination-bullet-horizontal-gap: 0.33rem;
-	--swiper-pagination-bullet-vertical-gap: 0.33rem;
-	--swiper-pagination-bullet-size: 0.5rem;
-	--swiper-pagination-bullet-width: 0.5rem;
-	--swiper-pagination-bullet-height: 0.5rem;
-	--swiper-pagination-bullet-opacity: 1;
-	--swiper-pagination-bullet-inactive-color: black;
-	--swiper-pagination-bullet-inactive-opacity: .2;
-	--swiper-pagination-bullet-horizontal-gap: 0.33rem;
+  --swiper-pagination-bullet-horizontal-gap: 0.33rem;
+  --swiper-pagination-bullet-vertical-gap: 0.33rem;
+  --swiper-pagination-bullet-size: 0.5rem;
+  --swiper-pagination-bullet-width: 0.5rem;
+  --swiper-pagination-bullet-height: 0.5rem;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-inactive-color: black;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-horizontal-gap: 0.33rem;
 }
 
 .wp-block-wpe-slider .swiper-wrapper {
-	/*height: 700px;*/
+  /*height: 700px;*/
+}
+.wp-block-wpe-slider .swiper-grid.swiper-grid-column .swiper-wrapper {
+  height: 700px;
+}
+
+
+/* Vertical slider height configuration */
+.wp-block-wpe-slider .swiper-vertical {
+  height: 500px; /* Default height for vertical sliders */
+}
+
+.wp-block-wpe-slider .swiper-vertical .swiper-wrapper {
+  height: 100%;
+}
+
+.wp-block-wpe-slider .swiper-vertical .swiper-slide {
+  height: 100%;
+  width: 100%;
+}
+
+/* Ensure proper container dimensions for vertical sliders */
+.wp-block-wpe-slider .swiper-vertical .swiper-gallery {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+/* Vertical slider with thumbnails layout */
+.wp-block-wpe-slider .swiper-vertical .swiper-thumbs {
+  width: 100px;
+  height: 500px;
+  margin-left: 10px;
+}
+
+/* Vertical slider navigation arrows */
+.wp-block-wpe-slider .swiper-vertical .swiper-button-prev,
+.wp-block-wpe-slider .swiper-vertical .swiper-button-next {
+  transform: rotate(90deg);
+}
+
+.wp-block-wpe-slider .swiper-vertical .swiper-button-prev {
+  top: 10px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.wp-block-wpe-slider .swiper-vertical .swiper-button-next {
+  top: auto;
+  bottom: 10px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%) rotate(90deg);
 }
 
 .wp-block-wpe-slide:where(.has-background)::before {
-	background-color: inherit;
-	content: "";
-	display: block;
-	inset: 0;
-	opacity: 0.5;
-	position: absolute;
-	z-index: 1;
+  background-color: inherit;
+  content: "";
+  display: block;
+  inset: 0;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 1;
 }
 
 .wp-block-wpe-slide__copy {
-	color: inherit;
-	font-family: var(--wp--preset--font-family--heading);
-	font-size: var(--wp--preset--font-size--x-large);
-	line-height: 1;
-	position: absolute;
-	left: calc(50% - 22ch);
-	margin: 0;
-	text-align: center;
-	top: calc(50% - (0.5 * var(--wp--preset--font-size--x-large)));
-	width: 44ch;
-	z-index:4;
+  color: inherit;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: var(--wp--preset--font-size--x-large);
+  line-height: 1;
+  position: absolute;
+  left: calc(50% - 22ch);
+  margin: 0;
+  text-align: center;
+  top: calc(50% - (0.5 * var(--wp--preset--font-size--x-large)));
+  width: 44ch;
+  z-index: 4;
 }
 
 .wp-block-wpe-slide__img {
-	aspect-ratio: 1/1;
-	display: block;
-	object-fit: cover;
-	width: 100%;
+  aspect-ratio: 1/1;
+  display: block;
+  object-fit: cover;
+  width: 100%;
 }
 
 .wp-block-wpe-slider:where(.is-style-complex) .swiper-pagination-fraction {
-	--swiper-pagination-bottom: auto;
-	color: var(--wp--preset--color--base);
-	font-family: var(--wp--preset--font-family--heading);
-	font-size: clamp(2.5rem, 2.5rem + ((1vw - 0.2rem) * 1.283), 3.27rem);
-	left: auto;
-	line-height: 1;
-	opacity: 0.9;
-	right: 6vw;
-	top: 1rem;
-	width: auto;
+  --swiper-pagination-bottom: auto;
+  color: var(--wp--preset--color--base);
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(2.5rem, 2.5rem + ((1vw - 0.2rem) * 1.283), 3.27rem);
+  left: auto;
+  line-height: 1;
+  opacity: 0.9;
+  right: 6vw;
+  top: 1rem;
+  width: auto;
 }
 
 .wp-block-wpe-slider:where(.is-style-complex) .swiper-pagination-current {
-	color: var(--swiper-theme-color);
+  color: var(--swiper-theme-color);
 }
 
 .wp-block-wpe-slider:where(.is-style-complex) .wp-block-wpe-slide__copy {
-	left: 8vw;
-	text-align: left;
+  left: 8vw;
+  text-align: left;
 }

@@ -1,0 +1,129 @@
+/* Old Plugin Styles - Start */
+.editor-styles-wrapper .gb-container .wp-block {
+  margin: 0 !important;
+}
+/* Old Plugin Styles - End */
+
+/* Editor Thumbnail Styles */
+.editor-thumbnails {
+  margin-top: 15px;
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0;
+  background: #f9f9f9;
+  border-radius: 4px;
+  overflow: hidden; /* Ensure smooth transitions */
+}
+
+.editor-thumbnails .swiper {
+  overflow: visible; /* Allow smooth sliding */
+}
+
+.editor-thumbnails .swiper-wrapper {
+  display: flex;
+  gap: 8px;
+  padding: 0 10px;
+  transition: transform 0.3s ease; /* Smooth transition for sliding */
+}
+
+.editor-thumbnail-slide {
+  flex: 0 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  transform: translateZ(0); /* Hardware acceleration for smooth transitions */
+}
+
+.editor-thumbnail-slide:hover {
+  border-color: #007cba;
+  transform: scale(1.05);
+}
+
+.editor-thumbnail-slide.swiper-slide-thumb-active {
+  border-color: #007cba;
+  box-shadow: 0 0 0 1px #007cba;
+}
+
+.editor-thumbnail-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Editor navigation styles */
+.editor-slide-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+  padding: 10px;
+  background: #f0f0f1;
+  border-radius: 4px;
+  border: 1px solid #c3c4c7;
+}
+
+.editor-slide-nav-button {
+  background: #007cba;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.editor-slide-nav-button:hover:not(:disabled) {
+  background: #005a87;
+}
+
+.editor-slide-nav-button:disabled {
+  background: #c3c4c7;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.editor-slide-counter {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d2327;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Ensure thumbnails don't interfere with block selection */
+.editor-thumbnails .swiper-slide {
+  pointer-events: auto;
+}
+
+/* Hide thumbnail content that's not images in editor */
+.editor-thumbnail-slide .wp-block-wpe-slide__content {
+  display: none;
+}
+
+.editor-thumbnail-slide .wp-block-wpe-slide__title {
+  display: none;
+}
+
+/* Responsive adjustments for editor */
+@media (max-width: 768px) {
+  .editor-thumbnails .swiper-wrapper {
+    gap: 6px;
+    padding: 0 5px;
+  }
+
+  .editor-thumbnail-slide {
+    width: 60px !important;
+    height: 45px !important;
+  }
+
+  .editor-slide-navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
